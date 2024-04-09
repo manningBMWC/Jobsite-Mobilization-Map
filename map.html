@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Sites Map</title>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AvfjohVZRPrnfXSuXrNMfKhR0zMu0tW6o_R2dS1DmtwA68kHKgn0RNanG4rtQ8Mg&callback=loadMapScenario' async defer></script>
+    <script type="text/javascript">
+    function loadMapScenario() {
+        var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+            center: new Microsoft.Maps.Location(47.6062, -122.3321), // Initial center of the map
+            zoom: 10 // Initial zoom level
+        });
+
+        // Example: Adding a single pushpin with a label. Repeat for additional job sites.
+        var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(47.608, -122.335), {
+            title: 'Job Site 1', // Title will be shown on hover
+            text: '1' // Text displayed on the pushpin
+        });
+        map.entities.push(pushpin);
+
+        // Add more pushpins as needed for other job sites
+        // You might load these dynamically from a data source or repeat the above for static locations
+    }
+    </script>
+</head>
+<body>
+    <div id="myMap" style="position:relative;width:800px;height:600px;"></div> <!-- Adjust size as needed -->
+</body>
+</html>
