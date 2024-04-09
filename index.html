@@ -10,12 +10,19 @@
             zoom: 10 // Initial zoom level
         });
 
-        // Example: Adding a single pushpin with a label. Repeat for additional job sites.
-        var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(47.608, -122.335), {
+        // Adding a pushpin for Job Site 1
+        var pushpin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(47.608, -122.335), {
             title: 'Job Site 1', // Title will be shown on hover
             text: '1' // Text displayed on the pushpin
         });
-        map.entities.push(pushpin);
+        map.entities.push(pushpin1);
+
+        // Adding a pushpin for Indy Office
+        var pushpin2 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(39.775231, -86.192787), {
+            title: 'Indy Office', // Title will be shown on hover
+            text: '2' // Text displayed on the pushpin
+        });
+        map.entities.push(pushpin2);
 
         // Add more pushpins as needed for other job sites
         // You might load these dynamically from a data source or repeat the above for static locations
